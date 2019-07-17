@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['map'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': ''
+      });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Lat', 'Long', 'Name'],  //Sustituir datos en las líneas siguientes --------------------
+          [18.999033645315656, -98.20617035993159, 'Evento 1'],
+			[19.032127165986186, -98.16968205226381, 'Evento 2'],
+			[19.05442562984624, -98.27344676176052, 'Evento 3']
+        ]);
+
+        var options = {
+          icons: {
+            default: {
+              normal: 'https://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Azure-icon.png',
+              selected: 'https://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Right-Azure-icon.png'
+            }
+          }
+        };
+
+        var map = new google.visualization.Map(document.getElementById('map_markers_div'));
+        map.draw(data, options);
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <div id="map_markers_div" style="width: 800px; height: 600px"></div>
+  </body>
+</html>
+
