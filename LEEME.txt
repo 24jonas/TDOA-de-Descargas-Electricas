@@ -18,7 +18,14 @@ Contenido:
 ----------------- 1- Red Compartida --------------------
 
 La red compartida es necesaria para que alguna computadora
-pueda accesar los datos obtenidos por los 3 sensores. 
+pueda accesar los datos obtenidos por los 3 sensores. El objetivo
+es obtener un directorio local que se actualice con los datos de
+los 3 sensores, esto se puede conseguir de distintas formas,
+incluyendo el uso de:
+
+- Base de datos
+- Repositorio Github
+- Servicio de sincronización de Dropbox
 
 
 
