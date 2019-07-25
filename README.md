@@ -178,7 +178,7 @@ datos en las líneas siguientes --------------------". Un ejemplo:
 
 Para visualizar los datos introducidos, el html se abre en un
 navegador, preferentemente Google Chrome, Mozilla Firefox o
-
+Chromium.
 
 --------------------------------------------------------
 
