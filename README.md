@@ -24,7 +24,7 @@ los 3 sensores, esto se puede conseguir de distintas formas,
 incluyendo el uso de:
 
 - Base de datos
-- Repositorio Github
+- Repositorio Github (con uso de crontab)
 - Servicio de sincronización de Dropbox
 
 
