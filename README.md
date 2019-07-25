@@ -178,3 +178,9 @@ datos en las líneas siguientes --------------------". Un ejemplo:
 
 Para visualizar los datos introducidos, el html se abre en un
 navegador, preferentemente Google Chrome, Mozilla Firefox o
+
+
+--------------------------------------------------------
+
+Para mayor información y guias, consultar el archivo "referencias de
+triangulación", "githubsync", y el datasheet del sensor.
