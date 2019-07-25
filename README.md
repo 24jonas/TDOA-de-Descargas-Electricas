@@ -5,10 +5,15 @@ para hacer funcionar la lectura, procesamiento
 y visualización de datos que ofrece el programa.
 
 Contenido:
+
 	1- Red compartida
+	
 	2- Especificación de ubicación de los sensores
+	
 	3- Conexiones multiples y formato de lectura
+	
 	4- Uso del juntador
+	
 	5- Uso de Google Maps
 
 
@@ -44,7 +49,9 @@ de estos muestra la información necesaria.
 Un ejemplo ubicado en Puebla, PUE:
 
 19.0163366 -98.2463520
+
 18.9840362 -98.1768171
+
 19.0694769 -98.2123514
 
 Para multiples sensores en 1 ubicación, basta con especificar
@@ -173,7 +180,9 @@ en "mapas.html", debajo la línea con el comentario " //Sustituir
 datos en las líneas siguientes --------------------". Un ejemplo:
 
 [18.999033645315656, -98.20617035993159, 'Evento 1'],
+
 [19.032127165986186, -98.16968205226381, 'Evento 2'],
+
 [19.05442562984624, -98.27344676176052, 'Evento 3']
 
 Para visualizar los datos introducidos, el html se abre en un
