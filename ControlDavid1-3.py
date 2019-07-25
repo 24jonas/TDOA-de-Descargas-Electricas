@@ -35,18 +35,18 @@ def handle_interrupt(channel):
     nodetecta = True
     while nodetecta:
         time.sleep(0.001)
-        reason = sensor.get_interrupt()
+        try:
+            reason = sensor.get_interrupt()
+        except:
+            reason = 0x08
         if reason == 0x08: #Descarga detectada
             now = datetime.now().strftime('%H:%M:%S.%f - %Y/%m/%d') #Tiempo actual UTC en str
             print ("¡Se ha detectado una descarga!")
-            distance = sensor.get_distance() #Distacia aproximada
-            energy = sensor.get_energy() #Energía aproximada
-            outstring = str(now)+" "+str(distance)+" "+str(energy)
+            outstring = str(now) + " " + str(0) + " " + str(0)
         #Cadena de escritura
             print (outstring)
-            f.write(outstring)
             f.write("\n")
-            f.flush
+            f.write(outstring)
             nodetecta = False
 
 GPIO.setup(pin,GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
@@ -72,6 +72,7 @@ try:
     print ("Esperando una descarga")
     while True:
         sensor.reset() #Se reinicia el sensor para no guardar información de descargas pasadas.
+        sensor.__init__(address=0x03, bus=4)
         sensor.set_noise_floor(noise) #Se ajusta el ruido al nivel del ciclo pasado
         sensor.set_min_strikes(1) #La toma de datos se hace a cada descarga
         sensor.calibrate(tun_cap=0x09) #Se vuelve a establecer el número de capacitacia debido al reinicio
